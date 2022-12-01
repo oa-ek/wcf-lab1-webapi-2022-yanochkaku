@@ -16,7 +16,8 @@
                     </div>
                 </div>
             </div>
-            <img src="@item.IconPath" alt="">
+            <br />
+    <img width="1024" height="683" src="https://post.healthline.com/wp-content/uploads/2020/12/healthy-eating-food-diet-ingredients-1024x628-facebook.jpg" class="attachment-large size-large wp-post-image" alt="фото" loading="lazy" itemprop="image" srcset="https://post.healthline.com/wp-content/uploads/2020/12/healthy-eating-food-diet-ingredients-1200x628-facebook.jpg 1024w,https://post.healthline.com/wp-content/uploads/2020/12/healthy-eating-food-diet-ingredients-300x200-facebook.jpg 300w, https://post.healthline.com/wp-content/uploads/2020/12/healthy-eating-food-diet-ingredients-768x512-facebook.jpg 768w, https://post.healthline.com/wp-content/uploads/2020/12/healthy-eating-food-diet-ingredients-1200x628-facebook.jpg 1080w" sizes="(max-width: 1024px) 100vw, 1024px">
 
 <!-- Receipe Content Area -->
         <div class="receipe-content-area">
@@ -59,23 +60,29 @@
                         <div class="single-preparation-step d-flex">
                             <h4>01.</h4>
                             <p> 
-                                @Html.DisplayFor(model => model.Preparation)
+                                @Html.DisplayFor(model => model.Preparation1)
                             </p>
                         </div>
                         <!-- Single Preparation Step -->
                         <div class="single-preparation-step d-flex">
                             <h4>02.</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
-                        </div>
+                        <p>
+                            @Html.DisplayFor(model => model.Preparation2)
+                        </p>
+                            </div>
                         <!-- Single Preparation Step -->
                         <div class="single-preparation-step d-flex">
                             <h4>03.</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                            <p>
+                                @Html.DisplayFor(model => model.Preparation3)
+                            </p>
                         </div>
                         <!-- Single Preparation Step -->
                         <div class="single-preparation-step d-flex">
                             <h4>04.</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                            <p>
+                                @Html.DisplayFor(model => model.Preparation4)
+                            </p>
                         </div>
                     </div>
 
@@ -87,26 +94,49 @@
                             <!-- Custom Checkbox -->
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                <label class="custom-control-label" for="customCheck2"> @Html.DisplayFor(model => model.Ingredients)</label>
+                                <label class="custom-control-label" for="customCheck2"> @Html.DisplayFor(model => model.Ingredients1)</label>
                             </div>
 
                             <!-- Custom Checkbox -->
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                <label class="custom-control-label" for="customCheck3">2 yogurt containers granulated sugar</label>
+                            <label class="custom-control-label" for="customCheck3">@Html.DisplayFor(model => model.Ingredients2)</label>
                             </div>
 
                             <!-- Custom Checkbox -->
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                <label class="custom-control-label" for="customCheck4">1 vanilla or plain yogurt, 170g container</label>
+                            <label class="custom-control-label" for="customCheck4">@Html.DisplayFor(model => model.Ingredients3)</label>
                             </div>
 
                             <!-- Custom Checkbox -->
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="customCheck5">
-                                <label class="custom-control-label" for="customCheck5">2 yogurt containers unbleached white flour</label>
+                            <label class="custom-control-label" for="customCheck5">@Html.DisplayFor(model => model.Ingredients4)</label>
                             </div>
+                        <!-- Custom Checkbox -->
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                            <label class="custom-control-label" for="customCheck2"> @Html.DisplayFor(model => model.Ingredients5)</label>
+                        </div>
+
+                        <!-- Custom Checkbox -->
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                            <label class="custom-control-label" for="customCheck3">@Html.DisplayFor(model => model.Ingredients6)</label>
+                        </div>
+
+                        <!-- Custom Checkbox -->
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                            <label class="custom-control-label" for="customCheck4">@Html.DisplayFor(model => model.Ingredients7)</label>
+                        </div>
+
+                        <!-- Custom Checkbox -->
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck5">
+                            <label class="custom-control-label" for="customCheck5">@Html.DisplayFor(model => model.Ingredients8)</label>
+                        </div>
                         </div>
                     </div>
                 </div>

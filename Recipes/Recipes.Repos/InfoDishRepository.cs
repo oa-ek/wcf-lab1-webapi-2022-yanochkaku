@@ -52,8 +52,18 @@ namespace Recipes.Repos
             infoDish.IconPath = updatedInfoDish.IconPath;
             infoDish.Difficulty = updatedInfoDish.Difficulty;
             infoDish.CookingTime = updatedInfoDish.CookingTime;
-            infoDish.Ingredients = updatedInfoDish.Ingredients;
-            infoDish.Preparation = updatedInfoDish.Preparation;
+            infoDish.Ingredients1 = updatedInfoDish.Ingredients1;
+            infoDish.Ingredients2 = updatedInfoDish.Ingredients2;
+            infoDish.Ingredients3 = updatedInfoDish.Ingredients3;
+            infoDish.Ingredients4 = updatedInfoDish.Ingredients4;
+            infoDish.Ingredients5 = updatedInfoDish.Ingredients5;
+            infoDish.Ingredients6 = updatedInfoDish.Ingredients6;
+            infoDish.Ingredients7 = updatedInfoDish.Ingredients7;
+            infoDish.Ingredients8 = updatedInfoDish.Ingredients8;
+            infoDish.Preparation1 = updatedInfoDish.Preparation1;
+            infoDish.Preparation2 = updatedInfoDish.Preparation2;
+            infoDish.Preparation3 = updatedInfoDish.Preparation3;
+            infoDish.Preparation4 = updatedInfoDish.Preparation4;
             infoDish.Categories = updatedInfoDish.Categories;
             await _ctx.SaveChangesAsync();
         }
@@ -69,9 +79,19 @@ namespace Recipes.Repos
                 IconPath = i.IconPath,
                 Difficulty = i.Difficulty,
                 CookingTime = i.CookingTime,
-                Ingredients = i.Ingredients,
-                Preparation = i.Preparation,
-                Categories = i.Categories,
+                Ingredients1 = i.Ingredients1,
+                Ingredients2 = i.Ingredients2,
+                Ingredients3 = i.Ingredients3,
+                Ingredients4 = i.Ingredients4,
+                Ingredients5 = i.Ingredients5,
+                Ingredients6 = i.Ingredients6,
+                Ingredients7 = i.Ingredients7,
+                Ingredients8 = i.Ingredients8,
+                Preparation1 = i.Preparation1,
+                Preparation2 = i.Preparation2,
+                Preparation3 = i.Preparation3,
+                Preparation4 = i.Preparation4,
+                Categories = i.Categories.NameCategory,
             };
             return infoDishDto;
         }
@@ -85,11 +105,31 @@ namespace Recipes.Repos
                 infoDish.IconPath = model.IconPath;
             if (infoDish.Difficulty != model.Difficulty)
                 infoDish.CookingTime = model.CookingTime;
-            if (infoDish.Ingredients != model.Ingredients)
-                infoDish.Ingredients = model.Ingredients;
-            if (infoDish.Preparation != model.Preparation)
-                infoDish.Preparation = model.Preparation;
-            if (infoDish.Categories != model.Categories)
+            if (infoDish.Ingredients1 != model.Ingredients1)
+                infoDish.Ingredients1 = model.Ingredients1;
+            if (infoDish.Ingredients2 != model.Ingredients2)
+                infoDish.Ingredients2 = model.Ingredients2;
+            if (infoDish.Ingredients3 != model.Ingredients3)
+                infoDish.Ingredients3 = model.Ingredients3;
+            if (infoDish.Ingredients4 != model.Ingredients4)
+                infoDish.Ingredients4 = model.Ingredients4;
+            if (infoDish.Ingredients5 != model.Ingredients5)
+                infoDish.Ingredients5 = model.Ingredients5;
+            if (infoDish.Ingredients6 != model.Ingredients6)
+                infoDish.Ingredients6 = model.Ingredients6;
+            if (infoDish.Ingredients7 != model.Ingredients7)
+                infoDish.Ingredients7 = model.Ingredients7;
+            if (infoDish.Ingredients8 != model.Ingredients8)
+                infoDish.Ingredients8 = model.Ingredients8;
+            if (infoDish.Preparation1 != model.Preparation1)
+                infoDish.Preparation1 = model.Preparation1;
+            if (infoDish.Preparation2 != model.Preparation2)
+                infoDish.Preparation2 = model.Preparation2;
+            if (infoDish.Preparation3 != model.Preparation3)
+                infoDish.Preparation3 = model.Preparation3;
+            if (infoDish.Preparation4 != model.Preparation4)
+                infoDish.Preparation4 = model.Preparation4;
+            if (infoDish.Categories.NameCategory != model.Categories)
                 infoDish.Categories = _ctx.Categories.FirstOrDefault(x => x.NameCategory == categories);
             _ctx.SaveChanges();
         }
@@ -107,9 +147,19 @@ namespace Recipes.Repos
                     IconPath = infoDish.IconPath,
                     Difficulty = infoDish.Difficulty,
                     CookingTime = infoDish.CookingTime,
-                    Ingredients = infoDish.Ingredients,
-                    Preparation = infoDish.Preparation,
-                    Categories = infoDish.Categories,
+                    Ingredients1 = infoDish.Ingredients1,
+                    Ingredients2 = infoDish.Ingredients2,
+                    Ingredients3 = infoDish.Ingredients3,
+                    Ingredients4 = infoDish.Ingredients4,
+                    Ingredients5 = infoDish.Ingredients5,
+                    Ingredients6 = infoDish.Ingredients6,
+                    Ingredients7 = infoDish.Ingredients7,
+                    Ingredients8 = infoDish.Ingredients8,
+                    Preparation1 = infoDish.Preparation1,
+                    Preparation2 = infoDish.Preparation2,
+                    Preparation3 = infoDish.Preparation3,
+                    Preparation4 = infoDish.Preparation4,
+                    Categories = infoDish.Categories.NameCategory,
                 };
                 return Details;
             }
