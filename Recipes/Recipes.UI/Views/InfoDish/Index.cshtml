@@ -1,0 +1,89 @@
+﻿@using Recipes.Core
+@{
+    var categories = ViewBag.Categories as IEnumerable<Category>;
+}
+
+@model List<InfoDish>
+<div class="float-end">
+    <a href="/InfoDish/create" class="btn btn-success">Додати рецепт</a>
+</div>
+<div class="text-center">
+    <h3>Каталог кулінарних рецептів</h3>
+</div>
+<hr />
+<br />
+<!-- Receipe Post Search -->
+<div class="row d-flex justify-content-center">
+    <div class="col-md-10 col-lg-9 col-xl-8">
+        <div class="card shadow-lg p-3 mb-5 rounded">
+            <div class="card-header bg-white">
+                <h4 class="mb-1">Пошук рецептів</h4>
+                <small class="text-muted"></small>
+            </div>
+
+            <form asp-action="Search" method="get">
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <label style="margin: 0.2em;">Title</label>
+                        <input type="text" class="form-control" name="title" placeholder="Name" required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label style="margin: 0.2em;">Difficulty</label>
+                        <input type="text" class="form-control" name="difficulty" placeholder="Name" required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label style="margin: 0.2em;">CookingTime</label>
+                        <input type="text" class="form-control" name="cookingTime" placeholder="Name" required>
+                    </div>               
+                    <div class="col-md-1 d-grid gap-2">
+                        <label> </label>
+                        <button type="submit" class="btn btn-success"><h4 class="mb-1">Пошук</h4></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<hr />
+<br />
+
+ <section class="best-receipe-area">
+       <tbody>
+        <div class="container row">
+            @foreach (var item in Model)
+            {
+                          <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="single-best-receipe-area mb-30">
+                                 <img src="@item.IconPath" alt="">
+                                    <div class="receipe-content">
+                                        <a href="receipe-post.html">
+                                            <h5 class="card-title">@item.Title</h5>
+                                        </a>
+                                            <div class="ratings">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <br>
+                                             <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <a class="btn btn-sm btn-outline-secondary" asp-action="Edit" asp-route-id="@item.Id">Редагувати</a>
+                                                    <a class="btn btn-sm btn-outline-secondary" asp-action="Details" asp-route-id="@item.Id">Деталі</a>
+                                                    <a class="btn btn-sm btn-outline-secondary" asp-action="Delete" asp-route-id="@item.Id">Видалити</a>
+                                <a class="btn btn-sm btn-outline-secondary" asp-action="Create" asp-controller="Save" asp-route-id="@item.Id">Вибране</a>
+                                                </div>
+                                             </div>
+                            </div>
+                          </div>
+            }
+        </div>
+    </tbody>
+
+            </div>
+        </div>
+ </section>
