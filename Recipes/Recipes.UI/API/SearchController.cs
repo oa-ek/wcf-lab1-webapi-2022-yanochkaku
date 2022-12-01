@@ -39,10 +39,20 @@ namespace Recipes.UI.API
                         IconPath = o.IconPath,
                         Difficulty = o.Difficulty,
                         CookingTime = o.CookingTime,
-                        Ingredients = o.Ingredients,
-                        Preparation = o.Preparation,
+                        Ingredients1 = o.Ingredients1,
+                        Ingredients2 = o.Ingredients2,
+                        Ingredients3 = o.Ingredients3,
+                        Ingredients4 = o.Ingredients4,
+                        Ingredients5 = o.Ingredients5,
+                        Ingredients6 = o.Ingredients6,
+                        Ingredients7 = o.Ingredients7,
+                        Ingredients8 = o.Ingredients8,
+                        Preparation1 = o.Preparation1,
+                        Preparation2 = o.Preparation2,
+                        Preparation3 = o.Preparation3,
+                        Preparation4 = o.Preparation4,
                         //Categories = o.Categories
-                       
+
                     })
                     .ToListAsync();
             }

@@ -19,9 +19,19 @@ namespace Recipes.Repos.Dto
 
         public string? CookingTime { get; set; }
 
-        public string? Ingredients { get; set; }
+        public string? Ingredients1 { get; set; }
+        public string? Ingredients2 { get; set; }
+        public string? Ingredients3 { get; set; }
+        public string? Ingredients4 { get; set; }
+        public string? Ingredients5 { get; set; }
+        public string? Ingredients6 { get; set; }
+        public string? Ingredients7 { get; set; }
+        public string? Ingredients8 { get; set; }
 
-        public string? Preparation { get; set; }
+        public string? Preparation1 { get; set; }
+        public string? Preparation2 { get; set; }
+        public string? Preparation3 { get; set; }
+        public string? Preparation4 { get; set; }
 
         public Category? Categories { get; set; }
 
